@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🏥 Aarogya Nexus Hospital</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-page">
+
+    <h2>📞 Contact Us</h2>
+
+    <div class="contact-card">
+
+        <h3>🏥 City Hospital</h3>
+
+        <p>📍 Hyderabad, Telangana</p>
+
+        <p>📞 +91 9876543210</p>
+
+        <p>✉️ hospital@gmail.com</p>
+
+        <p>🕒 Open 24 Hours</p>
+
+    </div>
+
+    <div class="contact-form">
+
+        <h3>Send a Message</h3>
+
+        <input type="text"
+        id="name"
+        placeholder="Your Name">
+
+        <input type="email"
+        id="email"
+        placeholder="Your Email">
+
+        <textarea
+        id="message"
+        placeholder="Enter Your Message">
+        </textarea>
+
+        <button onclick="sendMessage()">
+            Send Message
+        </button>
+
+        <p id="success"></p>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Aarogya Nexus Hospital | All Rights Reserved</p>
+</footer>
+
+<script>
+function sendMessage(){
+
+let name =
+document.getElementById("name").value;
+
+let email =
+document.getElementById("email").value;
+
+let message =
+document.getElementById("message").value;
+
+if(name==="" || email==="" || message===""){
+document.getElementById("success").innerHTML =
+"❌ Please fill all fields";
+}
+else{
+document.getElementById("success").innerHTML =
+"✅ Message Sent Successfully!";
+}
+}
+</script>
+
+</body>
+</html>

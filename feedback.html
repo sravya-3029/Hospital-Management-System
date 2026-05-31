@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Feedback</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🏥 Aarogya Nexus Hospital</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="feedback-page">
+
+    <h2>⭐ Patient Feedback</h2>
+
+    <div class="feedback-container">
+
+        <div class="feedback-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+                "Excellent doctors and caring staff.
+                The treatment was outstanding."
+            </p>
+            <h4>- Priya</h4>
+        </div>
+
+        <div class="feedback-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+                "Clean hospital and quick service.
+                Highly recommended."
+            </p>
+            <h4>- Rahul</h4>
+        </div>
+
+        <div class="feedback-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+                "Very professional doctors and
+                friendly nurses."
+            </p>
+            <h4>- Anjali</h4>
+        </div>
+
+    </div>
+
+    <div class="feedback-form">
+
+        <h3>Leave Your Feedback</h3>
+
+        <input type="text"
+        id="username"
+        placeholder="Your Name">
+
+        <textarea
+        id="review"
+        placeholder="Write your feedback">
+        </textarea>
+
+        <button onclick="submitFeedback()">
+            Submit Feedback
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Aarogya Nexus Hospital</p>
+</footer>
+
+<script>
+function submitFeedback(){
+
+let name =
+document.getElementById("username").value;
+
+let review =
+document.getElementById("review").value;
+
+if(name==="" || review===""){
+document.getElementById("message").innerHTML =
+"❌ Please fill all fields";
+}
+else{
+document.getElementById("message").innerHTML =
+"✅ Thank you for your feedback!";
+}
+}
+</script>
+
+</body>
+</html>
